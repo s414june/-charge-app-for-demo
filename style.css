@@ -1,0 +1,36 @@
+header div {
+  color: var(--bs-gray-600);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: calc(var(--vw, 1vw) * 100);
+  box-shadow: 0 -0.1rem 1rem rgba(0, 0, 0, 0.15);
+}
+.navbar a {
+  color: var(--bs-gray-600);
+}
+.navbar a.active {
+  color: var(--bs-primary);
+}
+
+.fa-lg {
+  font-size: 1.5rem;
+}
+
+.crosshairs {
+  background-color: #ffffff;
+  box-shadow: 0 -0.1rem 1rem rgba(0, 0, 0, 0.15);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--bs-gray-600);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+}
