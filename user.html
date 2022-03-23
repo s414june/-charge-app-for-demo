@@ -34,52 +34,62 @@
 
 <body>
     <div class="app">
-        <header>
-            <div class="p-2 d-flex justify-content-end h-100">
-                <div><i class="fa-solid fa-file-invoice-dollar fa-2xl p-2"></i></div>
-                <div><i class="fa-solid fa-bell fa-2xl p-2"></i></div>
+        <header style="height: 8rem;">
+            <div class="p-2 d-flex justify-content-start h-100 align-items-center">
+                <div class="user-head d-flex justify-content-center align-items-center">
+                    <i class="fa-solid fa-circle-user" style="font-size: 4rem; color: var(--bs-primary);"></i>
+                </div>
+                <div>
+                    <p class="m-0">June</p>
+                    <small>查看個人資料</small>
+                </div>
             </div>
         </header>
         <section id="main" class="position-relative">
-            <div class="d-flex justify-content-center align-items-center h-100 flex-column">
-                <div id="chart"></div>
-                <button class="btn btn-primary m-2">智慧繳費</button>
+            <div class="d-flex justify-content-start align-items-center h-100 w-100 flex-column">
+                <div class="px-2 py-3 d-flex justify-content-center align-items-end w-100 bg-primary text-white">
+                    <i class="fa-solid fa-car-rear pe-3" style="font-size: 3.5rem;"></i>
+                    <div class="d-flex align-items-center justify-content-end flex-column">
+                        <h5 class="mx-1 px-2">Volvo</h5>
+                        <p class="px-2 m-0">s90 T8</p>
+                    </div>
+                </div>
+                <div class="w-100 position-relative">
+                    <ul>
+                        <li>通知中心</li>
+                        <li>費率查詢</li>
+                        <li>我的錢包</li>
+                        <li>充電紀錄</li>
+                        <li>常用地址</li>
+                        <li>設定</li>
+                    </ul>
+                </div>
             </div>
         </section>
         <footer></footer>
         <script>
             $.get('footer.html', function (response) {
                 $('footer').html(response);
-                $("#menubtn-index").addClass("active");
+                $("#menubtn-user").addClass("active");
             });
         </script>
     </div>
 </body>
 <script>
 
-    var options = {
-        series: [70],
-        chart: {
-            height: 350,
-            type: 'radialBar'
-        },
-        colors: ['#183153'],
-        plotOptions: {
-            radialBar: {
-                hollow: {
-                    size: '70%',
-                }
-            },
-        },
-        labels: ['充電中'],
-    };
 
-    var chart = new ApexCharts(document.querySelector("#chart"), options);
-    chart.render();
-    $("#chart").click(() => {
-        let random = Math.floor(Math.random() * 50) + 50;
-        chart.updateSeries([random]);
-    })
 </script>
-
+<style>
+    ul{
+        width: 100%;
+        padding: 2rem;    }
+    ul li{
+        list-style:none;
+        padding: .5rem .1rem;
+        border-bottom: 1px solid var(--bs-primary);
+    }
+    ul li:last-child{
+        border-bottom: none;
+    }
+</style>
 </html>
