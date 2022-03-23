@@ -7,6 +7,7 @@ footer {
   bottom: 0;
   width: calc(var(--vw, 1vw) * 100);
   box-shadow: 0 -0.1rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
 }
 .navbar a {
   color: var(--bs-gray-600);
