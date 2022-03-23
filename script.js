@@ -6,6 +6,4 @@ $(function () {
 
     let vw = window.innerWidth * 0.01;
     document.documentElement.style.setProperty('--vw', `${vw}px`);
-
-    $("#main").height(window.innerHeight - $("header").height() -  $("footer").height());
 })

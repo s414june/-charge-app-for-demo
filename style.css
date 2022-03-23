@@ -1,8 +1,21 @@
+.text-primary{
+    color: #183153 !important;
+}
+
+header {
+  height: 4rem;
+}
+
+section#main{
+    height: calc(var(--vh, 1vh) * 100 - 8rem);
+}
+
 header div {
   color: var(--bs-gray-600);
 }
 
 footer {
+  height: 4rem;
   position: absolute;
   bottom: 0;
   width: calc(var(--vw, 1vw) * 100);
@@ -16,7 +29,7 @@ footer {
   color: var(--bs-primary);
 }
 
-.fa-lg {
+.fa-2xl {
   font-size: 1.5rem;
 }
 
@@ -34,4 +47,10 @@ footer {
   bottom: 0;
   right: 0;
   margin: 20px;
+}
+.search-icons{
+    position: absolute;
+    right: 0.9rem;
+    top: 50%;
+    transform: translateY(-50%);
 }

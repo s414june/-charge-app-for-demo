@@ -20,13 +20,13 @@
 
     <!-- app設定 -->
     <link rel="apple-touch-icon" href="icon.png" />
-    <link rel="stylesheet" media="all and (orientation:portrait)" href="portrait.css">
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400&display=swap" rel="stylesheet">
 
+    <script src="./apexcharts.js"></script>
 
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -35,12 +35,17 @@
 <body>
     <div class="app">
         <header>
-            <div class="p-2 d-flex justify-content-end">
-                <div><i class="fa-solid fa-file-invoice-dollar fa-lg p-2"></i></div>
-                <div><i class="fa-solid fa-bell fa-lg p-2"></i></div>
+            <div class="p-2 d-flex justify-content-end h-100">
+                <div><i class="fa-solid fa-file-invoice-dollar fa-2xl p-2"></i></div>
+                <div><i class="fa-solid fa-bell fa-2xl p-2"></i></div>
             </div>
         </header>
-        <section id="main" class="position-relative"></section>
+        <section id="main" class="position-relative">
+            <div class="d-flex justify-content-center align-items-center h-100 flex-column">
+                <div id="chart"></div>
+                <button class="btn btn-primary m-2">智慧繳費</button>
+            </div>
+        </section>
         <footer></footer>
         <script>
             $.get('footer.html', function (response) {
@@ -51,7 +56,29 @@
     </div>
 </body>
 <script>
-    $(function () {
+
+    var options = {
+        series: [70],
+        chart: {
+            height: 350,
+            type: 'radialBar'
+        },
+        colors: ['#0d6efd'],
+        plotOptions: {
+            radialBar: {
+                hollow: {
+                    size: '70%',
+                }
+            },
+        },
+        labels: ['充電中'],
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+    $("#chart").click(() => {
+        let random = Math.floor(Math.random() * 50) + 50;
+        chart.updateSeries([random]);
     })
 </script>
 
