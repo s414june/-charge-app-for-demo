@@ -1,58 +1,60 @@
-:root{
-    /* --bs-primary: #183153 !important; */
-    --bs-primary: #267fbb !important;
-    --bs-primary-rgb: 23, 48, 84 !important;
+:root {
+  /* --bs-primary: #183153 !important; */
+  --bs-primary: #267fbb !important;
+  --bs-primary-rgb: 23, 48, 84 !important;
 }
-body{
+body {
   background-color: #000000;
   color: var(--bs-gray-300);
 }
-h6{
+h6 {
   font-size: 1.3rem;
 }
-p{
+p {
   margin: 0;
   font-size: 1.2rem;
 }
-small{
-  font-size: .9rem;
-  margin-bottom: .09rem;
+small {
+  font-size: 0.9rem;
+  margin-bottom: 0.09rem;
 }
-.fa-lg{
+.fa-lg {
+  font-size: 1.2rem;
+}
+button.btn {
+  border-radius: 10000px;
+  padding: 0.5rem 1.2rem;
+  margin: 0.2rem;
+}
+button.btn-lg {
+  border-radius: 10000px;
+  padding: 0.6rem 0.8rem;
+  margin: 0.2rem;
   font-size: 1.3rem;
 }
-button.btn{
-  border-radius: 10000px;
-  padding: .1rem .8rem;
-  margin: .2rem;
-}
-button.btn-lg{
-  border-radius: 10000px;
-  padding: .6rem .8rem;
-  margin: .2rem;
-  font-size: 1.3rem;
-}
-.form-control{
+.form-control {
   border-radius: 10000px;
 }
-.btn-primary{
-    background-image: linear-gradient(to right, #183153,#267fbb) !important;
-    border: none !important;
-    box-shadow: 0.1rem 0.1rem .5rem rgba(255, 255, 255, 0.5);
+.btn-primary {
+  background-image: linear-gradient(to right, #183153, #267fbb) !important;
+  border: none !important;
 }
-.shadow-sm{
-  box-shadow: 0 .15rem .3rem rgba(255, 255, 255, 0.2) !important;
+.shadow {
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(255, 255, 255, 0.5) !important;
+}
+.shadow-sm {
+  box-shadow: 0 0.15rem 0.3rem rgba(255, 255, 255, 0.2) !important;
 }
 
 header {
   height: 5rem;
   background-color: #000000;
-  box-shadow: 0 0.1rem 0.5rem rgba(38, 127, 187,0.3);
+  box-shadow: 0 0.1rem 0.5rem rgba(38, 127, 187, 0.3);
 }
 
-section#main{
-    height: calc(var(--vh, 1vh) * 100 - 8rem);
-    overflow: hidden;
+section#main {
+  height: calc(var(--vh, 1vh) * 100 - 8rem);
+  overflow: hidden;
 }
 
 header div {
@@ -64,7 +66,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: calc(var(--vw, 1vw) * 100);
-  box-shadow: 0 -0.3rem 0.5rem rgba(38, 127, 187,0.5);
+  box-shadow: 0 -0.3rem 0.5rem rgba(38, 127, 187, 0.5);
   background-color: #000000;
   z-index: 50;
 }
@@ -94,41 +96,42 @@ footer {
   right: 0;
   margin: 20px;
 }
-.search-icons{
-    position: absolute;
-    right: 0.9rem;
-    top: 50%;
-    transform: translateY(-50%);
+.search-icons {
+  position: absolute;
+  right: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.user-head{
-    /* border:#183153 3px solid; */
-    width: 3.5rem;
-    height: 3.5rem;
-    margin: 1rem;
-    border-radius: 50%;
+.user-head {
+  /* border:#183153 3px solid; */
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 1rem;
+  border-radius: 50%;
 }
-#location-info{
+#location-info {
   border-radius: 10px 10px 0 0;
   min-height: calc(var(--vh, 1vh) * 100 - 8rem);
   position: absolute;
   top: 0;
   transform: translateY(calc(var(--vh, 1vh) * 100 - 8rem - 10rem));
   z-index: 10;
-  transition: .5s;
+  transition: 0.5s;
 }
-#location-info.fill{
+#location-info.fill {
   transform: translateY(0);
   border-radius: 0;
-  transition: .5s;
+  transition: 0.5s;
 }
-#location-btn{
-  top: 6rem;
+#location-btn {
+  bottom: 3.5rem;
+  z-index: 10;
 }
-#car-place{
-  background-image: linear-gradient(to right, #183153,#267fbb) !important;
-  box-shadow: 0 0.2rem 0.5rem rgba(255, 255, 255, 0.5);
+#car-place {
+  background-image: linear-gradient(to right, #183153, #267fbb) !important;
+  box-shadow: 0 0.5rem 0.5rem rgba(255, 255, 255, 0.3);
 }
-#searchLocationInput{
+#searchLocationInput {
   font-size: 1.1rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 }

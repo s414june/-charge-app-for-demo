@@ -58,7 +58,7 @@
                 <div class="location-block">
                     <div id="location-main">
                         <div class="d-flex  align-items-end justify-content-between">
-                            <p>成淵高中地下停車場</p>
+                            <p>民權西站</p>
                             <small class="btn btn-outline-light px-1 py-0 mx-1"
                                 style="font-size: .7rem;line-height: 1.2rem;">J1772</small>
                         </div>
@@ -82,21 +82,20 @@
                         <br><br><br><br><br><br><br><br><br><br><br><br><br>
                     </div>
                 </div>
-                <div class="position-absolute  p-2" id="location-btn">
-                    <button class="btn btn-dark">導航</button>
-                    <button class="btn btn-dark">預約</button>
-                    <button class="btn btn-dark">收藏</button>
-                </div>
             </div>
-    </div>
-    </section>
-    <footer></footer>
-    <script>
-        $.get('footer.html', function (response) {
-            $('footer').html(response);
-            $("#menubtn-location").addClass("active");
-        });
-    </script>
+            <div class="position-fixed  p-2 d-flex w-100" id="location-btn">
+                <button class="btn btn-dark">收藏</button>
+                <button class="btn btn-dark">導航</button>
+                <button class="btn btn-primary flex-grow-1">預約</button>
+            </div>
+        </section>
+        <footer></footer>
+        <script>
+            $.get('footer.html', function (response) {
+                $('footer').html(response);
+                $("#menubtn-location").addClass("active");
+            });
+        </script>
     </div>
 </body>
 <script>
