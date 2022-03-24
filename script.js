@@ -3,11 +3,14 @@ $(function () {
     let vh = window.innerHeight * 0.01;
     // Then we set the value in the --vh custom property to the root of the document
     document.documentElement.style.setProperty('--vh', `${vh}px`);
+    $("#back-place").hide();
 
     let vw = window.innerWidth * 0.01;
     document.documentElement.style.setProperty('--vw', `${vw}px`);
     $("#location-main").on("click tab",(e)=>{
         $("#location-info").toggleClass("fill");
+        $("#back-place").toggle();
+        $("#search-place").toggle();
     })
     // let lastScrollTop = 0;
     // $("#location-main").on("touchmove",(e)=>{
@@ -20,4 +23,9 @@ $(function () {
     //     }
     //     lastScrollTop = nowScrollTop;
     // })
+    $("#back-place").click(()=>{
+        $("#location-info").removeClass("fill");
+        $("#back-place").hide();
+        $("#search-place").show();
+    })
 })

@@ -16,7 +16,7 @@ p {
 }
 small {
   font-size: 0.9rem;
-  margin-bottom: 0.09rem;
+  margin-bottom: 0.2rem;
 }
 .fa-lg {
   font-size: 1.2rem;
@@ -46,6 +46,11 @@ button.btn-lg {
   box-shadow: 0 0.15rem 0.3rem rgba(255, 255, 255, 0.2) !important;
 }
 
+.badge {
+  display: flex;
+  align-items: center;
+}
+
 header {
   height: 5rem;
   background-color: #000000;
@@ -66,7 +71,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: calc(var(--vw, 1vw) * 100);
-  box-shadow: 0 -0.3rem 0.5rem rgba(38, 127, 187, 0.5);
+  box-shadow: 0 -0.5rem 0.5rem rgba(38, 127, 187, 0.7);
   background-color: #000000;
   z-index: 50;
 }
@@ -111,17 +116,21 @@ footer {
 }
 #location-info {
   border-radius: 10px 10px 0 0;
-  min-height: calc(var(--vh, 1vh) * 100 - 8rem);
+  height: calc(var(--vh, 1vh) * 100 - 8rem);
   position: absolute;
   top: 0;
-  transform: translateY(calc(var(--vh, 1vh) * 100 - 8rem - 10rem));
+  transform: translateY(calc(var(--vh, 1vh) * 100 - 8rem - 11rem));
   z-index: 10;
   transition: 0.5s;
+  overflow-y: auto;
 }
 #location-info.fill {
   transform: translateY(0);
   border-radius: 0;
   transition: 0.5s;
+}
+#location-info.fill ~ #search-place{
+  display: none;
 }
 #location-btn {
   bottom: 3.5rem;
@@ -134,4 +143,7 @@ footer {
 #searchLocationInput {
   font-size: 1.1rem;
   padding: 0.5rem 1rem;
+}
+.highlight{
+  font-weight: 700;
 }
