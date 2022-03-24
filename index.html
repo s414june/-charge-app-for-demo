@@ -40,10 +40,10 @@
                 <div><i class="fa-solid fa-bell fa-2xl p-2"></i></div>
             </div>
         </header>
-        <section id="main" class="position-relative">
+        <section id="main" class="position-relative bg-black">
             <div class="d-flex justify-content-center align-items-center h-100 flex-column">
                 <div id="chart"></div>
-                <button class="btn btn-primary m-2">智慧繳費</button>
+                <button class="btn-lg btn-primary m-2 w-75">智慧繳費</button>
             </div>
         </section>
         <footer></footer>
@@ -60,7 +60,7 @@
     var options = {
         series: [70],
         chart: {
-            height: 350,
+            height: 320,
             type: 'radialBar'
         },
         colors: ['#183153'],
@@ -68,14 +68,71 @@
             radialBar: {
                 hollow: {
                     size: '70%',
+                    dropShadow: {
+                        enabled: true,
+                        top: 3,
+                        left: 0,
+                        blur: 4,
+                        opacity: 0.24
+                    }
+                },
+                track: {
+                    background: '#fff',
+                    strokeWidth: '85%',
+                    margin: 0, // margin is in pixels
+                    dropShadow: {
+                        enabled: true,
+                        top: -3,
+                        left: 0,
+                        blur: 4,
+                        opacity: 0.35
+                    }
+                },
+                dataLabels: {
+                    show: true,
+                    name: {
+                        offsetY: -10,
+                        show: true,
+                        color: '#888',
+                        fontSize: '17px'
+                    },
+                    value: {
+                        formatter: function (val) {
+                            return parseInt(val) + "%";
+                        },
+                        color: '#267fbb',
+                        fontSize: '36px',
+                        show: true,
+                    }
                 }
             },
+
+        },
+
+        fill: {
+            type: 'gradient',
+            gradient: {
+                shade: 'dark',
+                type: 'horizontal',
+                shadeIntensity: 0.5,
+                gradientToColors: ['#267fbb'],
+                inverseColors: true,
+                opacityFrom: 1,
+                opacityTo: 1,
+                stops: [0, 100]
+            }
+        },
+        stroke: {
+            lineCap: 'round'
         },
         labels: ['充電中'],
     };
 
     var chart = new ApexCharts(document.querySelector("#chart"), options);
-    chart.render();
+
+    $(function () {
+        chart.render();
+    })
     $("#chart").click(() => {
         let random = Math.floor(Math.random() * 50) + 50;
         chart.updateSeries([random]);

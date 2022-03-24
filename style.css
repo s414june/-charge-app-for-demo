@@ -1,14 +1,25 @@
 :root{
-    --bs-primary: #183153 !important;
+    /* --bs-primary: #183153 !important; */
+    --bs-primary: #267fbb !important;
     --bs-primary-rgb: 23, 48, 84 !important;
 }
+body{
+  background-color: #000000;
+  color: var(--bs-gray-300);
+}
 .btn-primary{
-    background-color: #183153 !important;
-    border: 1px solid #183153 !important;
+    background-image: linear-gradient(to right, #183153,#267fbb) !important;
+    border: none !important;
+    box-shadow: 0.1rem 0.1rem .5rem rgba(255, 255, 255, 0.5);
+}
+.shadow-sm{
+  box-shadow: 0 .15rem .3rem rgba(255, 255, 255, 0.2) !important;
 }
 
 header {
-  height: 4rem;
+  height: 5rem;
+  background-color: #000000;
+  box-shadow: 0 0.1rem 0.5rem rgba(38, 127, 187,0.3);
 }
 
 section#main{
@@ -16,19 +27,19 @@ section#main{
 }
 
 header div {
-  color: var(--bs-gray-600);
+  color: var(--bs-gray-300);
 }
 
 footer {
-  height: 4rem;
+  height: 3rem;
   position: absolute;
   bottom: 0;
   width: calc(var(--vw, 1vw) * 100);
-  box-shadow: 0 -0.1rem 1rem rgba(0, 0, 0, 0.15);
-  background-color: #ffffff;
+  box-shadow: 0 -0.1rem 0.5rem rgba(38, 127, 187,0.3);
+  background-color: #000000;
 }
 .navbar a {
-  color: var(--bs-gray-600);
+  color: var(--bs-gray-300);
 }
 .navbar a.active {
   color: var(--bs-primary);
@@ -61,8 +72,8 @@ footer {
 }
 .user-head{
     /* border:#183153 3px solid; */
-    width: 4rem;
-    height: 4rem;
-    margin: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 1rem;
     border-radius: 50%;
 }

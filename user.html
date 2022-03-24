@@ -34,24 +34,24 @@
 
 <body>
     <div class="app">
-        <header style="height: 8rem;">
+        <header style="height: 5.5rem;" class="shadow-sm">
             <div class="p-2 d-flex justify-content-start h-100 align-items-center">
                 <div class="user-head d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-circle-user" style="font-size: 4rem; color: var(--bs-primary);"></i>
+                    <i class="fa-solid fa-circle-user" style="font-size: 3.5rem; color:#267fbb;"></i>
                 </div>
                 <div>
-                    <p class="m-0">June</p>
+                    <h6 class="m-0">June</h6>
                     <small>查看個人資料</small>
                 </div>
             </div>
         </header>
-        <section id="main" class="position-relative">
+        <section id="main" class="position-relative bg-black">
             <div class="d-flex justify-content-start align-items-center h-100 w-100 flex-column">
-                <div class="px-2 py-3 d-flex justify-content-center align-items-end w-100 bg-primary text-white">
-                    <i class="fa-solid fa-car-rear pe-3" style="font-size: 3.5rem;"></i>
+                <div class="px-2 py-2 d-flex justify-content-center align-items-end w-100 text-white shadow-sm" style="background-image: linear-gradient(to right, #183153,#267fbb) !important;">
+                    <i class="fa-solid fa-car-rear pe-3" style="font-size: 2.5rem;"></i>
                     <div class="d-flex align-items-center justify-content-end flex-column">
-                        <h5 class="mx-1 px-2">Volvo</h5>
-                        <p class="px-2 m-0">s90 T8</p>
+                        <h6 class="px-2 m-0">Volvo</h6>
+                        <small class="px-2 m-0">s90 T8</small>
                     </div>
                 </div>
                 <div class="w-100 position-relative">
@@ -80,16 +80,21 @@
 
 </script>
 <style>
-    ul{
+    ul {
         width: 100%;
-        padding: 2rem;    }
-    ul li{
-        list-style:none;
-        padding: .5rem .1rem;
-        border-bottom: 1px solid var(--bs-primary);
+        padding: 0 1rem;
     }
-    ul li:last-child{
+
+    ul li {
+        list-style: none;
+        padding: .8rem .1rem;
+        border-bottom: 1px solid #267fbb;
+        font-size: 1.1rem;
+    }
+
+    ul li:last-child {
         border-bottom: none;
     }
 </style>
+
 </html>
