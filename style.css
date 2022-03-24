@@ -7,6 +7,27 @@ body{
   background-color: #000000;
   color: var(--bs-gray-300);
 }
+p{
+  margin: 0;
+}
+small{
+  font-size: .5rem;
+  margin-bottom: .09rem;
+}
+button.btn{
+  border-radius: 10000px;
+  padding: .1rem .8rem;
+  margin: .2rem;
+}
+button.btn-lg{
+  border-radius: 10000px;
+  padding: .6rem .8rem;
+  margin: .2rem;
+  font-size: 1.3rem;
+}
+.form-control{
+  border-radius: 10000px;
+}
 .btn-primary{
     background-image: linear-gradient(to right, #183153,#267fbb) !important;
     border: none !important;
@@ -24,6 +45,7 @@ header {
 
 section#main{
     height: calc(var(--vh, 1vh) * 100 - 8rem);
+    overflow: hidden;
 }
 
 header div {
@@ -32,11 +54,12 @@ header div {
 
 footer {
   height: 3rem;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: calc(var(--vw, 1vw) * 100);
-  box-shadow: 0 -0.1rem 0.5rem rgba(38, 127, 187,0.3);
+  box-shadow: 0 -0.3rem 0.5rem rgba(38, 127, 187,0.5);
   background-color: #000000;
+  z-index: 50;
 }
 .navbar a {
   color: var(--bs-gray-300);
@@ -76,4 +99,26 @@ footer {
     height: 3.5rem;
     margin: 1rem;
     border-radius: 50%;
+}
+#location-info{
+  border-radius: 10px 10px 0 0;
+  min-height: calc(var(--vh, 1vh) * 100 - 8rem);
+  position: absolute;
+  top: 0;
+  transform: translateY(calc(var(--vh, 1vh) * 100 - 8rem - 8rem));
+  z-index: 10;
+  transition: .5s;
+}
+#location-info.fill{
+  transform: translateY(0);
+  border-radius: 0;
+  transition: .5s;
+}
+#car-place{
+  background-image: linear-gradient(to right, #183153,#267fbb) !important;
+  box-shadow: 0 0.2rem 0.5rem rgba(255, 255, 255, 0.5);
+}
+#searchLocationInput{
+  font-size: 1.1rem;
+  padding: .5rem 1rem;
 }

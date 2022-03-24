@@ -6,4 +6,18 @@ $(function () {
 
     let vw = window.innerWidth * 0.01;
     document.documentElement.style.setProperty('--vw', `${vw}px`);
+    $("#location-main").on("click tab",(e)=>{
+        $("#location-info").toggleClass("fill");
+    })
+    let lastScrollTop = 0;
+    $("#location-main").on("touchmove",(e)=>{
+        let nowScrollTop = $(e.currentTarget).offsetY();
+        if(nowScrollTop>lastScrollTop){
+            $("#location-info").removeClass("fill");
+        }
+        else{
+            $("#location-info").addClass("fill");
+        }
+        lastScrollTop = nowScrollTop;
+    })
 })

@@ -47,14 +47,14 @@
         </header>
         <section id="main" class="position-relative bg-black">
             <div class="d-flex justify-content-start align-items-center h-100 w-100 flex-column">
-                <div class="px-2 py-2 d-flex justify-content-center align-items-end w-100 text-white shadow-sm" style="background-image: linear-gradient(to right, #183153,#267fbb) !important;">
+                <div class="px-2 py-2 d-flex justify-content-center align-items-end w-100 text-white" id="car-place">
                     <i class="fa-solid fa-car-rear pe-3" style="font-size: 2.5rem;"></i>
                     <div class="d-flex align-items-center justify-content-end flex-column">
                         <h6 class="px-2 m-0">Volvo</h6>
                         <small class="px-2 m-0">s90 T8</small>
                     </div>
                 </div>
-                <div class="w-100 position-relative">
+                <div class="w-100 position-relative pt-2">
                     <ul>
                         <li>通知中心</li>
                         <li>費率查詢</li>
@@ -82,14 +82,15 @@
 <style>
     ul {
         width: 100%;
-        padding: 0 1rem;
+        padding: 0;
     }
 
     ul li {
         list-style: none;
-        padding: .8rem .1rem;
-        border-bottom: 1px solid #267fbb;
-        font-size: 1.1rem;
+        padding: .8rem 1.1rem;
+        /* border-bottom: 1px solid #267fbb; */
+        box-shadow: 0 0.3rem 0.3rem rgba(38, 127, 187, 0.4);
+        font-size: 1.2rem;
     }
 
     ul li:last-child {
