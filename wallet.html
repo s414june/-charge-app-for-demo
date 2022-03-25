@@ -55,19 +55,19 @@
                                 aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"
                                 aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
+                            <!-- <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button> -->
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="wallet-card"></div>
+                                <div class="wallet-card" id="card1"></div>
                             </div>
                             <div class="carousel-item">
-                                <div class="wallet-card"></div>
+                                <div class="wallet-card" id="card2"></div>
                             </div>
-                            <div class="carousel-item">
+                            <!-- <div class="carousel-item">
                                 <div class="wallet-card"></div>
-                            </div>
+                            </div> -->
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
                             data-bs-slide="prev">
@@ -149,6 +149,14 @@
         background-color: aquamarine;
         border-radius: 1rem;
         transform: translateX(calc(10vw - 1rem));
+    }
+    #card1{
+        background-image: url("credit_card1.png");
+        background-size: cover;
+    }
+    #card2{
+        background-image: url("credit_card2.jpg");
+        background-size: cover;
     }
 
     .btn-outline-light:focus,
