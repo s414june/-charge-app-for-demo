@@ -18,6 +18,10 @@ small {
   font-size: 0.9rem;
   margin-bottom: 0.2rem;
 }
+a,a:hover,a:active{
+  color: #ffffff;
+  text-decoration: none;
+}
 .fa-lg {
   font-size: 1.2rem;
 }
