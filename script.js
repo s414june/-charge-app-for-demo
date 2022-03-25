@@ -28,4 +28,14 @@ $(function () {
         $("#back-place").hide();
         $("#search-place").show();
     })
+    $("#collection-btn").click(()=>{
+        $("#collection-btn").children().toggleClass("pink");
+    })
+    $("#back-history-btn").click(()=>{
+        window.history.back();
+    })
+    $("#search-place .fa-magnifying-glass").click(()=>{
+        $("#location-info").toggleClass("hide");
+        $("#location-btn").toggleClass("hide");
+    })
 })

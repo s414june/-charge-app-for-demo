@@ -127,17 +127,23 @@ footer {
   transition: 0.5s;
   overflow-y: auto;
 }
+#location-info.hide {
+  transform: translateY(calc(var(--vh, 1vh) * 100 - 8rem));
+  transition: 0.5s;
+}
+#location-btn.hide{
+  transform: translateY(4rem);
+  transition: 0.5s;
+}
 #location-info.fill {
   transform: translateY(0);
   border-radius: 0;
   transition: 0.5s;
 }
-#location-info.fill ~ #search-place{
-  display: none;
-}
 #location-btn {
   bottom: 3rem;
   z-index: 10;
+  transition: 0.5s;
 }
 #car-place {
   background-image: linear-gradient(to right, #183153, #267fbb) !important;
@@ -149,4 +155,7 @@ footer {
 }
 .highlight{
   font-weight: 700;
+}
+#collection-btn .pink{
+  color: #fb7185;
 }

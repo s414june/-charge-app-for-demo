@@ -39,109 +39,73 @@
     <div class="app">
         <header class="bg-black">
             <div class="d-flex shadow-sm px-3 h-100 position-relative align-items-center">
-                <div class="w-100" id="search-place">
-                    <input type="search" class="form-control bg-black" id="searchLocationInput" placeholder="搜尋充電站">
-                    <div class="search-icons px-3">
-                        <i class="fa-solid fa-magnifying-glass fa-lg p-1 text-secondary"></i>
-                        <i class="fa-solid fa-filter  fa-lg p-1 text-secondary"></i>
-                    </div>
-                </div>
-                <div id="back-place" class="w-100">
-                    <div id="back-to-map-btn">
-                        <i class="fa-solid fa-chevron-down fa-lg"></i>
-                    </div>
-                </div>
+                <i class="fa-solid fa-chevron-left pe-4" id="back-history-btn"></i>
+                <p>預約充電</p>
             </div>
         </header>
         <section id="main" class="position-relative">
-            <div style="z-index: -5; height:100%;">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.099609906828!2d121.51940375082481!3d25.064612783879287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a944413100e3%3A0x78758b116c9f9129!2ststi%20-%20Tatung%20System%20Technologies%20Inc.!5e0!3m2!1szh-TW!2stw!4v1648016960175!5m2!1szh-TW!2stw"
-                    width="100%" height="100%" style="border:0;z-index: -5;" allowfullscreen="" loading="lazy">
-                </iframe>
-                <div class="crosshairs"><i class="fa-solid fa-crosshairs fa-2xl"></i></div>
-            </div>
-            <div id="location-info" class="position-absolute bg-black w-100 p-2 pt-3">
-                <div class="location-block">
-                    <div id="location-main">
-                        <div class="d-flex  align-items-end justify-content-between">
-                            <p>民權西站</p>
-                            <small class="btn btn-outline-light px-1 py-0 mx-1"
-                                style="font-size: .7rem;line-height: 1.2rem;">J1772</small>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <div>
-                                <small>AC 7.7 kW．32A</small>
-                                <div class="d-flex align-items-end">
-                                    <small class="px-1">耗時</small>
-                                    <p class="m-0">3分鐘</p>
-                                    <small class="px-1 ms-3">充速</small>
-                                    <p class="m-0">39km/h</p>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column align-items-end pt-2">
-                                <small>可用充電樁</small>
-                                <h5>2個</h5>
+            <div class="d-flex w-100 flex-column h-100">
+                <div class="w-100 px-2 py-3 flex-grow-1">
+                    <div>
+                        <p>預約車輛</p>
+                        <div class="d-flex">
+                            <div class="form-check mx-2">
+                                <input class="form-check-input" type="radio" name="selectCar" id="selectCar"
+                                    checked>
+                                <label class="form-check-label" for="selectCar">
+                                    Volvo s90 T8
+                                </label>
                             </div>
                         </div>
                     </div>
-                    <div id="location-detail">
-                        <hr>
-                        <div>
-                            <h5>充電車位資訊</h5>
-                            <div class="d-flex justify-content-between">
-                                <div class="d-flex  align-items-end">
-                                    <small class="px-1">充電車位總數量</small>
-                                    <p>10</p>
-                                </div>
-                                <span class="badge bg-success">開放中：2</span>
+                    <div class="pt-2">
+                        <p>預約電樁</p>
+                        <div class="d-flex">
+                            <div class="form-check mx-2">
+                                <input class="form-check-input" type="radio" name="selectCharge" id="selectCharge"
+                                    checked>
+                                <label class="form-check-label" for="selectCharge">
+                                    慢充
+                                </label>
                             </div>
-                            <div>
-                                <small>※資訊狀態每分鐘自動更新</small>
-                            </div>
-                        </div>
-                        <hr>
-                        <div>
-                            <h5>地點資訊</h5>
-                            <div class="d-flex justify-content-start">
-                                <small>營業時間：</small>
-                                <div class="d-flex flex-column">
-                                    <small>營業中</small>
-                                    <small class="highlight">週二 00:00-24:00</small>
-                                    <small>週三 00:00-24:00</small>
-                                    <small>週四 00:00-24:00</small>
-                                    <small>週五 00:00-24:00</small>
-                                    <small>週六 00:00-24:00</small>
-                                    <small>週日 00:00-24:00</small>
-                                    <small>週一 00:00-24:00</small>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-start">
-                                <small>停車費用：</small>
-                                <div class="d-flex flex-column">
-                                    <small>40元/小時，實際停車費用依現場為主</small>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-start">
-                                <small>電話：</small>
-                                <div class="d-flex flex-column">
-                                    <a href="tel:+0200000000"><small>02 0000 0000</small></a>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-start">
-                                <small>地址：</small>
-                                <div class="d-flex flex-column">
-                                    <small>台北市中山區民權西路72號</small>
-                                </div>
+                            <div class="form-check mx-2">
+                                <input class="form-check-input" type="radio" name="selectCharge" id="selectCharge2"
+                                >
+                                <label class="form-check-label" for="selectCharge2">
+                                    快充
+                                </label>
                             </div>
                         </div>
                     </div>
+                    <div class="pt-2">
+                        <p>預約時間</p>
+                        <div class="d-flex">
+                            <input type="datetime-local" class="form-control" style="border-radius: 3px;">
+                        </div>
+                    </div>
+                    <!-- <div class="pt-2">
+                        <p>付款方式</p>
+                        <div class="d-flex">
+                            <div class="form-check mx-2">
+                                <input class="form-check-input" type="radio" name="selectPay" id="selectPay"
+                                    checked>
+                                <label class="form-check-label" for="selectPay">
+                                    信用卡
+                                </label>
+                            </div>
+                            <div class="form-check mx-2">
+                                <input class="form-check-input" type="radio" name="selectPay" id="selectPay2"
+                                >
+                                <label class="form-check-label" for="selectPay2">
+                                    Line Pay
+                                </label>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
-            </div>
-            <div class="position-fixed  p-2 d-flex w-100 bg-black" id="location-btn">
-                <button class="btn btn-dark">收藏</button>
-                <button class="btn btn-dark">導航</button>
-                <button class="btn btn-primary flex-grow-1">預約</button>
+                <div class="my-4 w-100 text-center">
+                    <button class="btn btn-primary w-75">預約</button>
+                </div>
             </div>
         </section>
         <footer></footer>

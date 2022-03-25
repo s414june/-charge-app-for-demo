@@ -61,7 +61,7 @@
                 </iframe>
                 <div class="crosshairs"><i class="fa-solid fa-crosshairs fa-2xl"></i></div>
             </div>
-            <div id="location-info" class="position-absolute bg-black w-100 p-2 pt-3">
+            <div id="location-info" class="position-absolute bg-black w-100 p-2 pt-3 hide">
                 <div class="location-block">
                     <div id="location-main">
                         <div class="d-flex  align-items-end justify-content-between">
@@ -138,10 +138,12 @@
                     </div>
                 </div>
             </div>
-            <div class="position-fixed  p-2 d-flex w-100 bg-black" id="location-btn">
-                <a class="btn btn-dark">收藏</a>
-                <a class="btn btn-dark">導航</a>
-                <a class="btn btn-primary flex-grow-1">預約</a>
+            <div class="position-fixed  p-2 d-flex w-100 bg-black hide" id="location-btn">
+                <a class="btn btn-dark" id="collection-btn"><i class="fa-solid fa-heart pe-2"></i>收藏</a>
+                <a class="btn btn-dark" href="https://goo.gl/maps/JzZoBxna31EAAfTEA" target="_blank">
+                    <i class="fa-solid fa-location-arrow pe-2"></i>
+                    導航</a>
+                <a class="btn btn-primary flex-grow-1" href="./booking.html">預約</a>
             </div>
         </section>
         <footer></footer>
