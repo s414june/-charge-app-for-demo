@@ -126,7 +126,7 @@ footer {
   height: calc(var(--vh, 1vh) * 100 - 8rem);
   position: absolute;
   top: 0;
-  transform: translateY(calc(var(--vh, 1vh) * 100 - 8rem - 14rem));
+  transform: translateY(calc(var(--vh, 1vh) * 100 - 8rem - 13rem));
   z-index: 10;
   transition: 0.5s;
   overflow-y: auto;
