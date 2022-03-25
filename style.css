@@ -74,7 +74,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: calc(var(--vw, 1vw) * 100);
-  box-shadow: 0 -0.5rem 0.5rem rgba(38, 127, 187, 0.7);
+  box-shadow: 0 -0.5rem 0.5rem rgba(38, 127, 187, 0.45);
   background-color: #000000;
   z-index: 50;
 }
@@ -141,7 +141,7 @@ footer {
 }
 #car-place {
   background-image: linear-gradient(to right, #183153, #267fbb) !important;
-  box-shadow: 0 0.5rem 0.5rem rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0.3rem 0.3rem rgba(255, 255, 255, 0.4);
 }
 #searchLocationInput {
   font-size: 1.1rem;
