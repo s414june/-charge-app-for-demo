@@ -57,7 +57,7 @@ button.btn-lg,a.btn-lg {
 header {
   height: 5rem;
   background-color: #000000;
-  box-shadow: 0 0.1rem 0.5rem rgba(38, 127, 187, 0.3);
+  /* box-shadow: 0 0.1rem 0.5rem rgba(38, 127, 187, 0.3); */
 }
 
 section#main {
@@ -122,7 +122,7 @@ footer {
   height: calc(var(--vh, 1vh) * 100 - 8rem);
   position: absolute;
   top: 0;
-  transform: translateY(calc(var(--vh, 1vh) * 100 - 8rem - 11rem));
+  transform: translateY(calc(var(--vh, 1vh) * 100 - 8rem - 12rem));
   z-index: 10;
   transition: 0.5s;
   overflow-y: auto;
@@ -132,7 +132,7 @@ footer {
   transition: 0.5s;
 }
 #location-btn.hide{
-  transform: translateY(4rem);
+  transform: translateY(5rem);
   transition: 0.5s;
 }
 #location-info.fill {

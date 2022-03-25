@@ -42,8 +42,8 @@
         </header>
         <section id="main" class="position-relative bg-black">
             <div class="d-flex justify-content-center align-items-center h-100 flex-column">
-                <div id="chart"></div>
-                <button class="btn-lg btn-primary m-2 w-75 shadow">智慧繳費</button>
+                <div id="chart" class="not-fill"></div>
+                <button class="btn-lg btn btn-dark m-2 w-75" id="pay-btn">智慧繳費</button>
             </div>
         </section>
         <footer></footer>
@@ -134,8 +134,16 @@
         chart.render();
     })
     $("#chart").click(() => {
-        let random = Math.floor(Math.random() * 50) + 50;
-        chart.updateSeries([random]);
+        if($("#chart").hasClass("not-fill")){
+            chart.updateSeries([100]);
+            $("#chart").removeClass("not-fill");
+            $("#pay-btn").removeClass("btn-bark").addClass("btn-primary").addClass("shadow");
+        }
+        else{
+            chart.updateSeries([70]);
+            $("#chart").addClass("not-fill");
+            $("#pay-btn").addClass("btn-bark").removeClass("btn-primary").removeClass("shadow");
+        }
     })
 </script>
 

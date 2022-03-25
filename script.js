@@ -31,11 +31,16 @@ $(function () {
     $("#collection-btn").click(()=>{
         $("#collection-btn").children().toggleClass("pink");
     })
-    $("#back-history-btn").click(()=>{
-        window.history.back();
-    })
+    // $("#back-history-btn").click(()=>{
+    //     window.history.back();
+    // })
     $("#search-place .fa-magnifying-glass").click(()=>{
         $("#location-info").toggleClass("hide");
         $("#location-btn").toggleClass("hide");
+    })
+    $("#pay-btn").click(()=>{
+        if(!$("#chart").hasClass("not-fill")){
+            window.location.assign("./pay.html");
+        }
     })
 })
