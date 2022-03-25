@@ -41,62 +41,47 @@
             <div class="d-flex h-100 align-items-center justify-content-between">
                 <div class="d-flex mx-3 position-relative">
                     <a href="./user.html"><i class="fa-solid fa-chevron-left pe-4" id="back-history-btn"></i></a>
-                    <p>我的錢包</p>
+                    <p>充電紀錄</p>
                 </div>
-                <button class="btn btn-outline-light mx-3" style="border-radius: 5px;" id="liveToastBtn">儲存</button>
             </div>
         </header>
         <section id="main" class="position-relative">
             <div class="d-flex w-100 flex-column h-100">
-                <div class="px-3 py-3 position-relative">
-                    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="wallet-card"></div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="wallet-card"></div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="wallet-card"></div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="pt-2 w-100 px-3">
-                    <small>預設付款方式</small>
-                    <div>
-                        <div class="form-check m-2">
-                            <input class="form-check-input" type="radio" name="selectPay" id="selectPay" checked>
-                            <label class="form-check-label" for="selectPay">
-                                信用卡/簽帳金融卡
-                            </label>
-                        </div>
-                        <div class="form-check m-2">
-                            <input class="form-check-input" type="radio" name="selectPay" id="selectPay">
-                            <label class="form-check-label" for="selectPay">
-                                Line Pay
-                            </label>
-                        </div>
-                    </div>
+                <div class="px-3">
+                    <small>2022年4月</small>
+                    <table class="w-100 mb-3">
+                        <tr>
+                            <td>13日</td>
+                            <td>|</td>
+                            <td>民權西</td>
+                            <td>$1050</td>
+                            <td>500kWh</td>
+                        </tr>
+                        <tr>
+                            <td>11日</td>
+                            <td>|</td>
+                            <td>民權西</td>
+                            <td>$1030</td>
+                            <td>450kWh</td>
+                        </tr>
+                    </table>
+                    <small>2022年3月</small>
+                    <table class="w-100 mb-3">
+                        <tr>
+                            <td>22日</td>
+                            <td>|</td>
+                            <td>民權西</td>
+                            <td>$900</td>
+                            <td>200kWh</td>
+                        </tr>
+                        <tr>
+                            <td>10日</td>
+                            <td>|</td>
+                            <td>民權西</td>
+                            <td>$1030</td>
+                            <td>450kWh</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </section>
@@ -129,7 +114,7 @@
     // })
     var toastTrigger = document.getElementById('liveToastBtn')
     var toastLiveExample = document.getElementById('liveToast')
-    $(function(){
+    $(function () {
         var toast = new bootstrap.Toast(toastLiveExample)
         if (toastTrigger) {
             toastTrigger.addEventListener('click', function (e) {
@@ -137,7 +122,7 @@
                 e.stopPropagation();
             })
         }
-        $("body").click(()=>{
+        $("body").click(() => {
             toast.hide();
         })
     })
@@ -156,13 +141,30 @@
         background: none;
         color: #fff;
     }
-    #liveToastOutside{
+
+    #liveToastOutside {
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
-    #liveToast{
+
+    #liveToast {
         width: 100%;
+    }
+
+    table {
+        border-spacing: 0 10px;
+        border-collapse: unset;
+    }
+    table td {
+        background-color: var(--bs-gray-dark);
+        padding: 0.5rem;
+    }
+    table td:first-child {
+        border-radius:  5px 0 0  5px;
+    }
+    table td:last-child {
+        border-radius:  0 5px 5px 0;
     }
 </style>
 
