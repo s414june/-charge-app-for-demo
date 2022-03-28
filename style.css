@@ -163,3 +163,6 @@ footer {
 #collection-btn .pink{
   color: #fb7185;
 }
+#search-place{
+  display: flex;
+}
