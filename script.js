@@ -5,25 +5,6 @@ $(function () {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
     $("#back-place").hide();
 
-    var timeout;
-
-    window.addEventListener('scroll', function (ev) {
-
-        if (timeout) {
-            clearTimeout(timeout);
-        }
-
-        timeout = setTimeout(function () {
-
-            if (window.scrollY > 0) {
-                var cover = document.querySelector('div.cover');
-                cover.style.display = 'none';
-            }
-
-        }, 200);
-
-    });
-
     if (/iPhone/i.test(navigator.userAgent)) {
         document.documentElement.style.setProperty('--ios-bottom-space', `1rem`);
         $("html").css("height", "calc(var(--vh))*100 + 72px");
