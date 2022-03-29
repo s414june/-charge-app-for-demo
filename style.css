@@ -75,7 +75,7 @@ header div {
 }
 
 footer {
-  height: calc(3rem + var(--ios-bottom-space));
+  height: calc(4rem + var(--ios-bottom-space));
   position: fixed;
   bottom: 0;
   width: calc(var(--vw, 1vw) * 100);
