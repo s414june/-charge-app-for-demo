@@ -126,7 +126,7 @@ footer {
 }
 #location-info {
   border-radius: 10px 10px 0 0;
-  height: calc(var(--vh, 1vh) * 100 - 9rem);
+  height: calc(var(--vh, 1vh) * 100 - 9rem - 4.5rem);
   position: absolute;
   top: 0;
   transform: translateY(calc(var(--vh, 1vh) * 100 - 9rem - 14.5rem - var(--ios-bottom-space)));
