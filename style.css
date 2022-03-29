@@ -132,7 +132,7 @@ footer {
   transform: translateY(calc(var(--vh, 1vh) * 100 - 9rem - 14.5rem - var(--ios-bottom-space)));
   z-index: 10;
   transition: 0.5s;
-  overflow-y: auto;
+  overflow: hidden;
 }
 #location-info.hide {
   transform: translateY(calc(var(--vh, 1vh) * 100 - 9rem));
@@ -146,6 +146,7 @@ footer {
   transform: translateY(0);
   border-radius: 0;
   transition: 0.5s;
+  overflow-y: auto;
 }
 #location-btn {
   bottom: calc(4rem + var(--ios-bottom-space));
