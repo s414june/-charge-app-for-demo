@@ -5,7 +5,7 @@ $(function () {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
     $("#back-place").hide();
 
-    if (/iPhone/i.test(navigator.userAgent)) {
+    if (/iPhone|iphone/i.test(navigator.userAgent)) {
         document.documentElement.style.setProperty('--ios-bottom-space', `5rem`);
         $("html").css("height", "calc(var(--vh))*100 + 72px");
     }
