@@ -67,7 +67,7 @@ header {
 }
 
 section#main {
-  height: calc(var(--vh, 1vh) * 100 - 9rem - var(--ios-bottom-space));
+  height: calc(var(--vh, 1vh) * 100 - 9.5rem - var(--ios-bottom-space));
   /* overflow: hidden; */
   overflow-y: auto;
 }
