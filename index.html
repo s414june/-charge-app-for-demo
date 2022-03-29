@@ -17,22 +17,28 @@
         location.assign("./location.html")
     </script> -->
     <iframe src="./location.html" frameborder="0"></iframe>
-    <script>
-        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-        let vh = window.innerHeight * 0.01;
-        // Then we set the value in the --vh custom property to the root of the document
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-        $("#back-place").hide();
-    </script>
 </body>
 <style>
-    body{
+    body {
+        position: relative;
         margin: 0;
-    }
-    iframe {
         width: 100vw;
         height: calc(var(--vh)*100);
+        overflow: hidden;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
     }
 </style>
+
+<script>
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    const body = document.querySelector("body");
+</script>
 
 </html>

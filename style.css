@@ -7,6 +7,7 @@
 body {
   background-color: #000000;
   color: var(--bs-gray-300);
+  margin: 0;
 }
 h6 {
   font-size: 1.3rem;
@@ -66,8 +67,9 @@ header {
 }
 
 section#main {
-  height: calc(var(--vh, 1vh) * 100 - 8rem - var(--ios-bottom-space));
-  overflow: hidden;
+  height: calc(var(--vh, 1vh) * 100 - 9rem - var(--ios-bottom-space));
+  /* overflow: hidden; */
+  overflow-y: auto;
 }
 
 header div {
@@ -124,16 +126,16 @@ footer {
 }
 #location-info {
   border-radius: 10px 10px 0 0;
-  height: calc(var(--vh, 1vh) * 100 - 8rem);
+  height: calc(var(--vh, 1vh) * 100 - 9rem);
   position: absolute;
   top: 0;
-  transform: translateY(calc(var(--vh, 1vh) * 100 - 8rem - 14.5rem - var(--ios-bottom-space)));
+  transform: translateY(calc(var(--vh, 1vh) * 100 - 9rem - 14.5rem - var(--ios-bottom-space)));
   z-index: 10;
   transition: 0.5s;
   overflow-y: auto;
 }
 #location-info.hide {
-  transform: translateY(calc(var(--vh, 1vh) * 100 - 8rem));
+  transform: translateY(calc(var(--vh, 1vh) * 100 - 9rem));
   transition: 0.5s;
 }
 #location-btn.hide{
@@ -146,7 +148,7 @@ footer {
   transition: 0.5s;
 }
 #location-btn {
-  bottom: calc(3rem + var(--ios-bottom-space));
+  bottom: calc(4rem + var(--ios-bottom-space));
   z-index: 10;
   transition: 0.5s;
 }
