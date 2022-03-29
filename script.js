@@ -5,6 +5,10 @@ $(function () {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
     $("#back-place").hide();
 
+    if (/iPhone/i.test(navigator.userAgent)) {
+        $("footer").css("height","4rem");
+    }
+
     let vw = window.innerWidth * 0.01;
     document.documentElement.style.setProperty('--vw', `${vw}px`);
     $("#location-main").on("click tab",(e)=>{
