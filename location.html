@@ -186,11 +186,18 @@
         overflow-y: auto;
         height: 2.5rem;
     }
-    header{
+
+    header {
         height: 7rem;
     }
-    header.small{
+
+    header.small {
         height: 4.5rem;
+    }
+
+    section#main {
+        height: calc(var(--vh, 1vh) * 100 - 9rem - var(--ios-bottom-space));
+        overflow: hidden;
     }
 </style>
 
