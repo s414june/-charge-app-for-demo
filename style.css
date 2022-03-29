@@ -2,6 +2,7 @@
   /* --bs-primary: #183153 !important; */
   --bs-primary: #267fbb !important;
   --bs-primary-rgb: 23, 48, 84 !important;
+  --ios-bottom-space: 0rem;
 }
 body {
   background-color: #000000;
@@ -74,7 +75,7 @@ header div {
 }
 
 footer {
-  height: 3rem;
+  height: calc(3rem + var(--ios-bottom-space));
   position: fixed;
   bottom: 0;
   width: calc(var(--vw, 1vw) * 100);
@@ -126,7 +127,7 @@ footer {
   height: calc(var(--vh, 1vh) * 100 - 8rem);
   position: absolute;
   top: 0;
-  transform: translateY(calc(var(--vh, 1vh) * 100 - 8rem - 13rem));
+  transform: translateY(calc(var(--vh, 1vh) * 100 - 8rem - 14.5rem - var(--ios-bottom-space)));
   z-index: 10;
   transition: 0.5s;
   overflow-y: auto;
@@ -136,7 +137,7 @@ footer {
   transition: 0.5s;
 }
 #location-btn.hide{
-  transform: translateY(5rem);
+  transform: translateY(calc(5rem));
   transition: 0.5s;
 }
 #location-info.fill {
@@ -145,7 +146,7 @@ footer {
   transition: 0.5s;
 }
 #location-btn {
-  bottom: 3rem;
+  bottom: calc(3rem + var(--ios-bottom-space));
   z-index: 10;
   transition: 0.5s;
 }

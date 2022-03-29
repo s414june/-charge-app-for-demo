@@ -6,12 +6,12 @@ $(function () {
     $("#back-place").hide();
 
     if (/iPhone/i.test(navigator.userAgent)) {
-        $("footer").css("height","4rem");
+        document.documentElement.style.setProperty('--ios-bottom-space', `1rem`);
     }
 
     let vw = window.innerWidth * 0.01;
     document.documentElement.style.setProperty('--vw', `${vw}px`);
-    $("#location-main").on("click tab",(e)=>{
+    $("#location-main").on("click",(e)=>{
         $("#location-info").toggleClass("fill");
         $("#back-place").toggle();
         $("#search-place").toggle();
@@ -38,7 +38,7 @@ $(function () {
     // $("#back-history-btn").click(()=>{
     //     window.history.back();
     // })
-    $("#search-place .fa-magnifying-glass").click(()=>{
+    $("#show-location-icon").click(()=>{
         $("#location-info").toggleClass("hide");
         $("#location-btn").toggleClass("hide");
     })
