@@ -110,7 +110,7 @@ footer {
 }
 .search-icons {
   position: absolute;
-  right: 0.9rem;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -154,8 +154,9 @@ footer {
   box-shadow: 0 0.3rem 0.3rem rgba(255, 255, 255, 0.4);
 }
 #searchLocationInput {
-  font-size: 1.1rem;
-  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  padding: 0.4rem 0.9rem;
+  width: calc(100% - 4rem);
 }
 .highlight{
   font-weight: 700;
