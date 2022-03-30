@@ -129,9 +129,9 @@
     //         $("#location-info").toggleClass("fill");
     // })
     var toastTrigger = document.getElementById('liveToastBtn')
-    var toastLiveExample = document.getElementById('liveToast')
+    var liveToast = document.getElementById('liveToast')
     $(function(){
-        var toast = new bootstrap.Toast(toastLiveExample)
+        var toast = new bootstrap.Toast(liveToast)
         if (toastTrigger) {
             toastTrigger.addEventListener('click', function (e) {
                 toast.show();
@@ -164,14 +164,6 @@
     .btn-outline-light:hover {
         background: none;
         color: #fff;
-    }
-    #liveToastOutside{
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-    #liveToast{
-        width: 100%;
     }
 </style>
 

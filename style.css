@@ -172,3 +172,12 @@ footer {
 #search-place{
   display: flex;
 }
+
+#liveToastOutside{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#liveToast{
+  width: 100%;
+}
