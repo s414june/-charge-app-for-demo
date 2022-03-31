@@ -52,7 +52,7 @@
     VerifyUser();
 
     function VerifyUser() {
-        let Password = localStorage.getItem("Password");
+        let Password = sessionStorage.getItem("Password");
         if (Password == testPassword) {
             document.querySelector("iframe").style.display = "block";
             document.querySelector("#verifyPlace").style.display = "none";
@@ -73,7 +73,7 @@
     function Login(){
         let inputPassword = document.getElementById("password").value;
         if(inputPassword == testPassword){
-            localStorage.setItem("Password", testPassword);
+            sessionStorage.setItem("Password", testPassword);
             document.querySelector("iframe").style.display = "block";
             document.querySelector("#verifyPlace").style.display = "none";
         }
