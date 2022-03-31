@@ -16,6 +16,7 @@
     <!-- <script>
         location.assign("./location.html")
     </script> -->
+    <!-- <div class="verifyModal"></div> -->
     <iframe src="./location.html" frameborder="0"></iframe>
 </body>
 <style>
@@ -39,6 +40,20 @@
     // Then we set the value in the --vh custom property to the root of the document
     document.documentElement.style.setProperty('--vh', `${vh}px`);
     const body = document.querySelector("body");
+
+    VerifyUser();
+
+    function VerifyUser() {
+        const testPassword = "70771557Car";
+        let Password = localStorage.getItem("Password");
+        if (Password == testPassword) {
+            return;
+        } else {
+            let inputPassword = prompt("請輸入驗證碼", "");
+            if (inputPassword != testPassword)
+                document.querySelector("body").innerHTML = "";
+        }
+    }
 </script>
 
 </html>
