@@ -52,6 +52,9 @@
             let inputPassword = prompt("請輸入驗證碼", "");
             if (inputPassword != testPassword)
                 document.querySelector("body").innerHTML = "";
+            else {
+                localStorage.setItem("Password", testPassword);
+            }
         }
     }
 </script>
