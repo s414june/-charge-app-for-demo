@@ -47,7 +47,7 @@
     // Then we set the value in the --vh custom property to the root of the document
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-    document.querySelector("iframe").style.display = "none";
+    document.querySelector("#verifyPlace").style.display = "none";
 
     VerifyUser();
 
@@ -56,6 +56,10 @@
         if (Password == testPassword) {
             document.querySelector("iframe").style.display = "block";
             document.querySelector("#verifyPlace").style.display = "none";
+        }
+        else{
+            document.querySelector("#verifyPlace").style.display = "block";
+            document.querySelector("iframe").style.display = "none";
         }
         //  else {
         //     let inputPassword = prompt("請輸入驗證碼", "");
