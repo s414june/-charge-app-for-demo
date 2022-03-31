@@ -17,6 +17,11 @@
         location.assign("./location.html")
     </script> -->
     <!-- <div class="verifyModal"></div> -->
+    <div id="verifyPlace">
+        <label for="">請輸入驗證碼：</label>
+        <input type="password" id="password">
+        <button onclick="Login()">送出</button>
+    </div>
     <iframe src="./location.html" frameborder="0"></iframe>
 </body>
 <style>
@@ -26,6 +31,7 @@
         width: 100vw;
         height: calc(var(--vh)*100);
         overflow: hidden;
+        color: #000;
     }
 
     iframe {
@@ -35,26 +41,37 @@
 </style>
 
 <script>
+    const testPassword = "70771557Car";
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
     // Then we set the value in the --vh custom property to the root of the document
     document.documentElement.style.setProperty('--vh', `${vh}px`);
-    const body = document.querySelector("body");
+
+    document.querySelector("iframe").style.display = "none";
 
     VerifyUser();
 
     function VerifyUser() {
-        const testPassword = "70771557Car";
         let Password = localStorage.getItem("Password");
         if (Password == testPassword) {
-            return;
-        } else {
-            let inputPassword = prompt("請輸入驗證碼", "");
-            if (inputPassword != testPassword)
-                document.querySelector("body").innerHTML = "";
-            else {
-                localStorage.setItem("Password", testPassword);
-            }
+            document.querySelector("iframe").style.display = "block";
+            document.querySelector("#verifyPlace").style.display = "none";
+        }
+        //  else {
+        //     let inputPassword = prompt("請輸入驗證碼", "");
+        //     if (inputPassword != testPassword)
+        //         document.querySelector("body").innerHTML = "";
+        //     else {
+        //         localStorage.setItem("Password", testPassword);
+        //     }
+        // }
+    }
+    function Login(){
+        let inputPassword = document.getElementById("password").value;
+        if(inputPassword == testPassword){
+            localStorage.setItem("Password", testPassword);
+            document.querySelector("iframe").style.display = "block";
+            document.querySelector("#verifyPlace").style.display = "none";
         }
     }
 </script>
