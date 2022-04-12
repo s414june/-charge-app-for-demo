@@ -49,8 +49,8 @@ $(function () {
         $("#location-btn").toggleClass("hide");
     })
     $("#pay-btn").click(()=>{
-        if(!$("#chart").hasClass("not-fill")){
-            window.location.assign("./pay.html");
-        }
+        window.location.assign("./pay.html");
+        // if(!$("#chart").hasClass("not-fill")){
+        // }
     })
 })
