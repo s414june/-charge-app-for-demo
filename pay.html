@@ -59,16 +59,24 @@
                     </div>
                     <div class="pt-2">
                         <small>付款方式</small>
-                        <div class="d-flex">
+                        <div>
                             <div class="form-check m-2">
-                                <input class="form-check-input" type="radio" name="selectPay" id="selectPay" checked>
-                                <label class="form-check-label" for="selectPay">
-                                    信用卡/簽帳金融卡
+                                <input class="form-check-input" type="radio" name="selectPay" id="selectPay1">
+                                <label class="form-check-label" for="selectPay1">
+                                    信用卡
+                                    <small class="text-secondary px-2">JCB 富邦 5432</small>
                                 </label>
                             </div>
                             <div class="form-check m-2">
-                                <input class="form-check-input" type="radio" name="selectPay" id="selectPay2">
+                                <input class="form-check-input" type="radio" name="selectPay2" id="selectPay" checked>
                                 <label class="form-check-label" for="selectPay2">
+                                    金融卡
+                                    <small class="text-secondary px-2">VISA 中信 3456</small>
+                                </label>
+                            </div>
+                            <div class="form-check m-2">
+                                <input class="form-check-input" type="radio" name="selectPay" id="selectPay3">
+                                <label class="form-check-label" for="selectPay3">
                                     Line Pay
                                 </label>
                             </div>
@@ -78,15 +86,14 @@
                         <small>發票</small>
                         <div>
                             <div class="form-check m-2">
-                                <input class="form-check-input" type="radio" name="selectReceipt" id="selectReceipt"
-                                    checked>
+                                <input class="form-check-input" type="radio" name="selectReceipt" id="selectReceipt">
                                 <label class="form-check-label" for="selectReceipt">
                                     電子載具
                                     <small class="text-secondary px-2">/UJMZPR2</small>
                                 </label>
                             </div>
                             <div class="form-check m-2">
-                                <input class="form-check-input" type="radio" name="selectReceipt" id="selectReceipt2">
+                                <input class="form-check-input" type="radio" name="selectReceipt" id="selectReceipt2" checked>
                                 <label class="form-check-label" for="selectReceipt2">
                                     二聯式發票
                                 </label>
@@ -95,16 +102,17 @@
                                 <input class="form-check-input" type="radio" name="selectReceipt" id="selectReceipt3">
                                 <label class="form-check-label" for="selectReceipt3">
                                     三聯式發票
+                                    <small class="text-secondary px-2">大同股份有限公司</small>
                                 </label>
                             </div>
-                            <div class="mb-3 m-2">
+                            <div class="m-2">
                                 <label for="exampleFormControlInput1" class="form-label">統一編號(選填)</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                                <input type="text" id="exampleFormControlInput1" placeholder="">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="my-4 w-100 text-center">
+                <div class="w-100 text-center">
                     <a class="btn btn-primary w-75" href="./pay-ok.html">付款</a>
                 </div>
             </div>
