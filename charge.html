@@ -43,7 +43,7 @@
         </header>
         <section id="main" class="position-relative bg-black">
 
-            <div class="d-flex justify-content-start align-items-center h-100 flex-column">
+            <div class="d-flex justify-content-between align-items-center h-100 flex-column">
                 <div class="text-center">
                     <div class="d-flex align-items-end">
                         <small>充滿尚需</small>
@@ -181,6 +181,11 @@
             chart.updateSeries([70]);
             $("#chart").addClass("not-fill");
         }
+    })
+    $("#pay-btn").click(()=>{
+        window.location.assign("./pay.html");
+        // if(!$("#chart").hasClass("not-fill")){
+        // }
     })
 </script>
 

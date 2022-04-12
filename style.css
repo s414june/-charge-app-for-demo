@@ -3,6 +3,7 @@
   --bs-primary: #267fbb !important;
   --bs-primary-rgb: 23, 48, 84 !important;
   --ios-bottom-space: 0rem;
+  --bs-info-rgb: 38, 127, 187 !important;
 }
 body {
   background-color: #000000;
@@ -37,6 +38,10 @@ button.btn-lg,a.btn-lg {
   padding: 0.6rem 0.8rem;
   margin: 0.2rem;
   font-size: 1.3rem;
+}
+input[type='text'],
+input[type='email'] {
+    width: 100%;
 }
 .form-control {
   border-radius: 10000px;
@@ -183,4 +188,12 @@ footer {
 }
 .text-info{
   color: #5ebfff !important;
+}
+
+.badge-outline {
+  border: 1px solid #fff;
+}
+.edit-btn{
+  font-size: 1rem !important;
+  padding: 0.6rem 0.8rem !important;
 }

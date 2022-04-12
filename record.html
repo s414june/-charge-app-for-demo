@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=yes" />
-    
+
     <title>一手掌握充電站</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -48,42 +48,36 @@
         </header>
         <section id="main" class="position-relative">
             <div class="d-flex w-100 flex-column h-100">
-                <div class="px-3">
-                    <small>2022年4月</small>
-                    <table class="w-100 mb-3">
-                        <tr>
-                            <td>13日</td>
-                            <!-- <td>|</td> -->
-                            <td>民權西</td>
-                            <td>$1050</td>
-                            <td>500kWh</td>
-                        </tr>
-                        <tr>
-                            <td>11日</td>
-                            <!-- <td>|</td> -->
-                            <td>民權西</td>
-                            <td>$1030</td>
-                            <td>450kWh</td>
-                        </tr>
-                    </table>
-                    <small>2022年3月</small>
-                    <table class="w-100 mb-3">
-                        <tr>
-                            <td>22日</td>
-                            <!-- <td>|</td> -->
-                            <td>民權西</td>
-                            <td>$900</td>
-                            <td>200kWh</td>
-                        </tr>
-                        <tr>
-                            <td>10日</td>
-                            <!-- <td>|</td> -->
-                            <td>民權西</td>
-                            <td>$1030</td>
-                            <td>450kWh</td>
-                        </tr>
-                    </table>
-                </div>
+                <small class="px-2">2022年4月</small>
+                <table class="w-100 mb-3">
+                    <tr>
+                        <td>13日</td>
+                        <td>民權西</td>
+                        <td>$1050</td>
+                        <td>500kWh</td>
+                    </tr>
+                    <tr>
+                        <td>11日</td>
+                        <td>民權西</td>
+                        <td>$1030</td>
+                        <td>450kWh</td>
+                    </tr>
+                </table>
+                <small class="px-2">2022年3月</small>
+                <table class="w-100 mb-3">
+                    <tr>
+                        <td>22日</td>
+                        <td>民權西</td>
+                        <td>$900</td>
+                        <td>200kWh</td>
+                    </tr>
+                    <tr>
+                        <td>10日</td>
+                        <td>民權西</td>
+                        <td>$1030</td>
+                        <td>450kWh</td>
+                    </tr>
+                </table>
             </div>
         </section>
         <footer></footer>
@@ -93,41 +87,8 @@
                 $("#menubtn-location").addClass("active");
             });
         </script>
-        <div class="position-fixed p-3" style="z-index: 11" id="liveToastOutside">
-            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="toast-body text-black">
-                    <!-- <div class="d-flex w-100 justify-content-end mb-2">
-                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div> -->
-                    <div class="d-flex align-items-center">
-                        <i class="fa-solid fa-check px-2"></i>
-                        <p>修改成功！</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </body>
-<script>
-    // $("body").click((e) => {s
-    //     if (e.target.parentElement.id == "location-info" || e.target.id == "location-info")
-    //         $("#location-info").toggleClass("fill");
-    // })
-    var toastTrigger = document.getElementById('liveToastBtn')
-    var toastLiveExample = document.getElementById('liveToast')
-    $(function () {
-        var toast = new bootstrap.Toast(toastLiveExample)
-        if (toastTrigger) {
-            toastTrigger.addEventListener('click', function (e) {
-                toast.show();
-                e.stopPropagation();
-            })
-        }
-        $("body").click(() => {
-            toast.hide();
-        })
-    })
-</script>
 <style>
     .wallet-card {
         width: 80vw;
@@ -143,25 +104,18 @@
         color: #fff;
     }
 
-    #liveToastOutside {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    #liveToast {
-        width: 100%;
-    }
 
     table {
-        border-spacing: 0 5px;
+        border-spacing: 0;
         border-collapse: unset;
     }
+
     table td {
         background-color: rgb(3, 22, 43);
         padding: 0.8rem 0.5rem;
         font-size: 0.9rem;
     }
+
     /* table td:first-child {
         border-radius:  5px 0 0  5px;
     }
@@ -171,19 +125,25 @@
     table td:nth-child(1) {
         width: 3.3rem;
         text-align: center;
-    } 
+    }
+
     /* table td:nth-child(2) {
         width: 0.5rem;
     } */
+    table td {
+        border-bottom: 2px solid #000000;
+    }
     table td:nth-child(2) {
         font-size: 1rem;
-        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid #000000;
     }
+
     table td:nth-child(3) {
         width: 5rem;
         font-weight: bold;
         text-align: right;
     }
+
     table td:nth-child(4) {
         width: 5rem;
         text-align: right;
